@@ -90,7 +90,7 @@ before_script:
       awesome &
     fi
   - if [[ $CAPYBARA_REMOTE ]]; then
-      wget http://selenium-release.storage.googleapis.com/3.11/selenium-server-standalone-3.11.0.jar
+      wget http://selenium-release.storage.googleapis.com/3.11/selenium-server-standalone-3.11.0.jar;
       java -jar selenium-server-standalone-3.11.0.jar &
     fi
 script: "bundle exec rake travis"
