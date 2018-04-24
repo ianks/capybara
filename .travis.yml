@@ -92,7 +92,6 @@ before_script:
   - if [[ $CAPYBARA_REMOTE ]]; then
       npm install selenium-standalone@latest -g;
       selenium-standalone install;
+      selenium-standalone start &
     fi
-  - if [[ $CAPYBARA_REMOTE ]]; then selenium-standalone start \&; fi
-
 script: "bundle exec rake travis"
