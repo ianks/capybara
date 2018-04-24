@@ -91,7 +91,7 @@ before_script:
     fi
   - if [[ $CAPYBARA_REMOTE ]]; then
       npm install selenium-standalone@latest -g;
-      selenium-standalone install;
+      selenium-standalone install --version=3.11.0;
       selenium-standalone start &
     fi
 script: "bundle exec rake travis"
