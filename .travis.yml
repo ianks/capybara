@@ -91,6 +91,7 @@ before_script:
     fi
   - if [[ $CAPYBARA_REMOTE ]]; then
       wget http://selenium-release.storage.googleapis.com/3.11/selenium-server-standalone-3.11.0.jar;
+      export PATH=~/.webdrivers:$PATH;
       java -jar selenium-server-standalone-3.11.0.jar &
     fi
 script: "bundle exec rake travis"
