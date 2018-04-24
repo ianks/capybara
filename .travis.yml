@@ -90,9 +90,7 @@ before_script:
       awesome &
     fi
   - if [[ $CAPYBARA_REMOTE ]]; then
-      npm i -g npm;
-      npm install selenium-standalone@latest -g;
-      selenium-standalone install --version=3.11.0;
-      selenium-standalone start &
+      wget http://selenium-release.storage.googleapis.com/3.11/selenium-server-standalone-3.11.0.jar
+      java -jar selenium-server-standalone-3.11.0.jar &
     fi
 script: "bundle exec rake travis"
